@@ -1,9 +1,11 @@
-import { Vendor } from "./Models/Vendor.js";
+import { Snack } from "./Models/Snack.js";
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 import { loadState } from "./Utils/Store.js";
 
-class AppState extends EventEmitter {}
+class AppState extends EventEmitter {
+  snacks = [new Snack("Chips", 1)];
+}
 
 export const appState = new Proxy(new AppState(), {
   get(target, prop) {
