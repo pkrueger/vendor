@@ -4,7 +4,7 @@ export class Snack {
   }
 
   get Template() {
-    return `
+    return /*html*/ `
       <div class="col-4 text-center">
         <h3>${this.name}</h3>
         <h4>${this.price}</h4>
