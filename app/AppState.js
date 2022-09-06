@@ -4,7 +4,14 @@ import { isValidProp } from "./Utils/isValidProp.js";
 import { loadState } from "./Utils/Store.js";
 
 class AppState extends EventEmitter {
-  snacks = [new Snack("Chips", 1)];
+  /** @type {import('./Models/Snack').Snack[]} */
+  snacks = [
+    new Snack("Chips", 1),
+    new Snack("Reeses", 2),
+    new Snack("M&Ms", 1.5),
+  ];
+
+  money = 0;
 }
 
 export const appState = new Proxy(new AppState(), {

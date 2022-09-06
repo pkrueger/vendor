@@ -26,5 +26,25 @@
     <title>Vendor</title>
   </head>
 
-  <body></body>
+  <body>
+    <main class="container">
+      <div id="snacks" class="row pt-5">
+        <!-- <div class="col-4 text-center">
+          <h3>Name</h3>
+          <h4>Price</h4>
+          <button class="btn" onclick="app.snacksController.buySnack('Chips')">
+            BUY
+          </button>
+        </div> -->
+      </div>
+      <div class="row flex-column text-center py-5">
+        <div class="col">$<span id="money">0.00</span></div>
+        <div class="col">
+          <button class="btn" onclick="app.snacksController.addQuarter()">
+            Add Quarter
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
