@@ -12,6 +12,11 @@ function _drawSnacks() {
   document.getElementById("snacks").innerHTML = template;
 }
 
+function _update() {
+  // @ts-ignore
+  document.getElementById("money").innerText = appState.money;
+}
+
 export class SnacksController {
   constructor() {
     _drawSnacks();
@@ -19,16 +24,11 @@ export class SnacksController {
 
   buySnack(name) {
     snacksService.buySnack(name);
-    this.update();
+    _update();
   }
 
   addQuarter() {
     snacksService.addQuarter();
-    this.update();
-  }
-
-  update() {
-    // @ts-ignore
-    document.getElementById("money").innerText = appState.money;
+    _update();
   }
 }
